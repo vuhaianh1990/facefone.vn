@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/panel.css" type="text/css">
+  <style>
+    footer span>a.icon {
+      color: white;
+    }
+
+    footer span>a.icon svg * {
+      fill: #ffffff;
+    }
+
+    footer span>a.icon svg *:hover {
+      fill: white;
+      color: white;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #e6e6e6;
+      text-align: left;
+      padding: 4px;
+      font-size: 13px;
+    }
+
+    #data-lastscan tr:nth-child(even) {
+      background-color: #f5f2f2;
+    }
+
+    .tb-header th img {
+      width: 22px;
+      float: left;
+      margin: 10px;
+    }
+
+    .tb-header th p {
+      float: left;
+    }
+
+    #data-login.data-login a {
+      background: #3b5997;
+      padding: 10px 30px;
+      color: white;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 25px;
+    }
+
+    #data-login {
+      text-align: center;
+      padding: 10px 10px 20px;
+    }
+
+    footer {
+      position: fixed;
+      background: #57bb3b;
+    }
+
+    .tabContainer {
+      min-height: 80px;
+    }
+
+    .tabContainer .tabContent {
+      min-height: 80px;
+    }
+
+    #loadlogin {
+      height: 74px;
+    }
+
+    #profile-picture {
+      margin: 10px;
+    }
+
+    .sqbtn.sqbtn-small {
+      height: 35px;
+      border-radius: 22px;
+      padding: 0px 12px;
+      line-height: 26px;
+      font-size: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 30px;
+    }
+  </style>
+</head>
+
+<body class="small">
+  <header class="container">
+    <div class="main-menu">
+      <nav>
+        <a href="#pageinfo" rel="pageinfo" data-role="moduleLink">FaceFone</a>
+        <div class="pull-right">
+          <span>
+            <button id="switch-panel" class="seoquake-slider-button seoquake-slider-button-active">Switch</button>
+          </span>
+          <span data-role="options">
+            <a href="#options" rel="options" class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14 8c0-.4 0-.7-.1-1.1l2.1-1.2-2-3.5-2.1 1.2c-.5-.4-1.2-.8-1.9-1.1v-2.3h-4v2.3c-.7.3-1.4.7-1.9 1.2l-2.1-1.2-2 3.4 2.1 1.2c-.1.4-.1.7-.1 1.1s0 .7.1 1.1l-2.1 1.2 2 3.5 2.1-1.2c.5.4 1.2.8 1.9 1.1v2.3h4v-2.3c.7-.3 1.4-.6 1.9-1.1l2.1 1.2 2-3.5-2.1-1.2c.1-.4.1-.7.1-1.1zm-6 4c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+                />
+                <circle cx="8" cy="8" r="2" />
+              </svg>
+            </a>
+          </span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div id="data-panel" class="data-panel" style="display:none">
+      <div class="tabContainer">
+        <div class="tabPanels">
+          <div class="tabContent">
+            <table>
+              <tr class="loading-login">
+                <th colspan="3" id="loadlogin">
+                  <img src="img/loading.gif">
+                </th>
+              </tr>
+              <tr class="info">
+                <th style="width: 50px;height: 75px;">
+                  <img id="profile-picture" src="img/avatar.png" alt="Paris" width="50" height="50">
+                </th>
+                <th style=" border-right: none; ">
+                  <h3>Xin Chào,
+                    <span id="profile-name">N/A</span>.</h3>
+                  <h4 style="margin-top: -15px;">
+                    <span id="profile-type">Hạn sử dụng:</span>
+                    <span id="profile-expired">N/A</span>
+                  </h4>
+                </th>
+                <th style="border-left: none;">
+                  <img src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EShutdown%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' d='M44.01 13.216a24 24 0 1 1-24.012-.004' fill='none' stroke='%23ff0000' stroke-miterlimit='10' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3Cpath data-name='layer1' fill='none' stroke='%23ff0000' stroke-miterlimit='10' stroke-width='4' d='M32 8v24' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E"
+                    alt="Shutdown" style="width: 22px;height: 10px;float: right;margin: 14px;">
+                  <h3 style="text-align: right;padding-right: 14px;">
+                    <a href="#" class="logout">Đăng Xuất</a>
+                  </h3>
+                </th>
+              </tr>
+            </table>
+            <br>
+            <div id="ScanHistory">
+              <table id='data-lastscan' name='data-lastscan'>
+                <tr class="tb-header">
+                  <th>
+                    <img src="img/date.png" />
+                    <p>Ngày scan</p>
+                  </th>
+                  <th>
+                    <img src="img/user.png">
+                    <p>Tên KH</p>
+                  </th>
+                  <!-- <th style="width:40px">
+                    <img src="img/phone.png" />
+
+                  </th>
+                  <th>
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgaGVpZ2h0PSIxMTBweCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEwIDExMDsiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDExMCAxMTAiIHdpZHRoPSIxMTBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgaWQ9IkFydGJvYXJkIi8+PGcgaWQ9Ik11bHRpY29sb3IiPjxjaXJjbGUgY3g9IjU1IiBjeT0iNTUiIHI9IjU1IiBzdHlsZT0iZmlsbDojMzJCRUE2OyIvPjxnPjxyZWN0IGhlaWdodD0iNjAiIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiB3aWR0aD0iNTAiIHg9IjM3IiB5PSIyNyIvPjxnPjxwYXRoIGQ9Ik02NS43MjQsNzNjMCw0LjQxOCwzLjU4Miw4LDgsOGM0LjQxOCwwLDguNDE2LTMuNjAxLDgtOGMtMC40MjMtNC40NzYtMy44OTMtOC4wNDItOC04ICAgICBDNjkuMzA2LDY1LjA0Niw2NS43MjQsNjguNTgyLDY1LjcyNCw3M3oiIHN0eWxlPSJmaWxsOiNGQkUxNTg7Ii8+PHBhdGggZD0iTTY1LjcyNCw3M2MwLDQuNDIsMy41OCw4LDgsOGMzLjM2LDAsNi4yMzMtMi4wNjcsNy40Mi01bC0xNC43OC02LjE1MyAgICAgQzY1Ljk1MSw3MC44MTMsNjUuNzI0LDcxLjg4LDY1LjcyNCw3M3oiIHN0eWxlPSJmaWxsOiMwNTlCQkY7Ii8+PHBhdGggZD0iTTY1LjcxMiw3My4wMDNjMCwyLjgyLDEuNDYsNS4zLDMuNjY3LDYuNzI3bDQuMzI3LTYuODJsLTcuMzUzLTMuMDYgICAgIEM2NS45MzksNzAuODE3LDY1LjcxMiw3MS44ODMsNjUuNzEyLDczLjAwM3oiIHN0eWxlPSJmaWxsOiM0QUMzQUY7Ii8+PHBhdGggZD0iTTY2LjM2NCw2OS44NDdsNy4zNiwzLjA2N1Y2NUM3MC40MjQsNjUsNjcuNTkxLDY3LDY2LjM2NCw2OS44NDd6IiBzdHlsZT0iZmlsbDojRkE1NjU1OyIvPjwvZz48cmVjdCBoZWlnaHQ9IjE4IiBzdHlsZT0iZmlsbDojNEFDM0FGOyIgd2lkdGg9IjQiIHg9Ijc3IiB5PSI0MCIvPjxyZWN0IGhlaWdodD0iMTAiIHN0eWxlPSJmaWxsOiM0QUMzQUY7IiB3aWR0aD0iNCIgeD0iNjkuNzEyIiB5PSI0OCIvPjxnPjxjaXJjbGUgY3g9IjYwLjMzMyIgY3k9IjY4LjE2NyIgcj0iMS41IiBzdHlsZT0iZmlsbDojQ0ZEM0Q0OyIvPjxyZWN0IGhlaWdodD0iMSIgc3R5bGU9ImZpbGw6I0NGRDNENDsiIHdpZHRoPSIxMCIgeD0iNDYuNzEyIiB5PSI2Ny42NjciLz48L2c+PGc+PGNpcmNsZSBjeD0iNjAuMzMzIiBjeT0iNzMuMzMzIiByPSIxLjUiIHN0eWxlPSJmaWxsOiNDRkQzRDQ7Ii8+PHJlY3QgaGVpZ2h0PSIxIiBzdHlsZT0iZmlsbDojQ0ZEM0Q0OyIgd2lkdGg9IjEwIiB4PSI0Ni43MTIiIHk9IjcyLjgzMyIvPjwvZz48Zz48Y2lyY2xlIGN4PSI2MC4zMzMiIGN5PSI3OC41IiByPSIxLjUiIHN0eWxlPSJmaWxsOiNDRkQzRDQ7Ii8+PHJlY3QgaGVpZ2h0PSIxIiBzdHlsZT0iZmlsbDojQ0ZEM0Q0OyIgd2lkdGg9IjEwIiB4PSI0Ni43MTIiIHk9Ijc4Ii8+PC9nPjxwYXRoIGQ9Ik0zOS43NDIsNTguMDIxTDI4Ljk0NCw2OC44MTljLTEuMzQ0LDEuMzQ0LTMuNTIyLDEuMzQ0LTQuODY3LDBzLTEuMzQ0LTMuNTIyLDAtNC44NjdMMzQuOSw1My4xMzEgICAgQzM2LjA5OCw1NS4xMjYsMzcuNzU4LDU2LjgwNSwzOS43NDIsNTguMDIxeiIgc3R5bGU9ImZpbGw6Izg0NDYyRDsiLz48cGF0aCBkPSJNMzYuOTkyLDU1LjgyNkwyNC4wNDEsNjguNzc3Yy0xLjMwOC0xLjM0NC0xLjI5Ni0zLjQ5MiwwLjAzLTQuODI0TDM0LjksNTMuMTI1ICAgIEMzNS40ODksNTQuMTA0LDM2LjE5NSw1NS4wMSwzNi45OTIsNTUuODI2eiIgc3R5bGU9ImZpbGw6IzlDNjE0NDsiLz48cGF0aCBkPSJNNDcuNCw2MC4xYy03Ljk5NSwwLTE0LjUtNi41MDUtMTQuNS0xNC41czYuNTA1LTE0LjUsMTQuNS0xNC41czE0LjUsNi41MDUsMTQuNSwxNC41ICAgIFM1NS4zOTYsNjAuMSw0Ny40LDYwLjF6IiBzdHlsZT0iZmlsbDojRkZGRkZGOyIvPjxwYXRoIGQ9Ik00Ny40LDMxLjA4OGM4LjAxMiwwLDE0LjUxMiw2LjUsMTQuNTEyLDE0LjUxMnMtNi41LDE0LjUxMi0xNC41MTIsMTQuNTEyICAgIGMtOC4wNDEsMC0xNC41MTItNi41NjEtMTQuNTEyLTE0LjUxMkMzMi44ODgsMzcuNTg4LDM5LjM4OCwzMS4wODgsNDcuNCwzMS4wODggTTQ3LjQsMjkuMWMtOS4wOTgsMC0xNi41LDcuNDAyLTE2LjUsMTYuNSAgICBzNy40MDIsMTYuNSwxNi41LDE2LjVzMTYuNS03LjQwMiwxNi41LTE2LjVTNTYuNDk5LDI5LjEsNDcuNCwyOS4xTDQ3LjQsMjkuMXoiIHN0eWxlPSJmaWxsOiNDRkQzRDQ7Ii8+PGNpcmNsZSBjeD0iNDcuNCIgY3k9IjQ1LjYiIHI9IjExLjU1OCIgc3R5bGU9ImZpbGw6IzZGREFGMTsiLz48cGF0aCBkPSJNNDcuNCwzNC4wNDJjLTYuMzgzLDAtMTEuNTU4LDUuMTc1LTExLjU1OCwxMS41NThjMCwzLjE1OCwxLjI3LDYuMDE4LDMuMzIzLDguMTA0bDE2LjMzOS0xNi4zMzkgICAgQzUzLjQxOCwzNS4zMTEsNTAuNTU5LDM0LjA0Miw0Ny40LDM0LjA0MnoiIHN0eWxlPSJmaWxsOiM5Q0U1RjQ7Ii8+PC9nPjwvZz48L3N2Zz4=">
+                    <p>Nguồn</p>
+                  </th> -->
+                  <!-- <th>
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjQ4cHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZWZzLz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGlkPSJzaGFkb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIj48ZyBpZD0ibG9jYXRpb24iPjxwYXRoIGQ9Ik0yNCw0OCBDMzcuMjU0ODM0Nyw0OCA0OCwzNy4yNTQ4MzQ3IDQ4LDI0IEM0OCwxMC43NDUxNjUzIDM3LjI1NDgzNDcsMCAyNCwwIEMxMC43NDUxNjUzLDAgMCwxMC43NDUxNjUzIDAsMjQgQzAsMzcuMjU0ODM0NyAxMC43NDUxNjUzLDQ4IDI0LDQ4IFoiIGZpbGw9IiNDRTZGMkQiLz48cGF0aCBkPSJNMC42ODQ2OTU5OTUsMjkuNzE1MzA0IEMyLjQ0ODU0MTk3LDM2LjkzNTY0NjIgNy40Nzg5NTE1NSw0Mi44NzUxNjc1IDE0LjEyMTAyODQsNDUuODc4OTcxNiBMMjMuMTkxOTkyMiwzNi44MDgwMDc4IEwzMC4wODU5Mzc1LDIxLjMzNzg5MDYgTDI3LjgyMDcwMzEsMTMuNzk0MTQwNiBMMTYuNjA1ODU5NCwxMy43OTQxNDA2IEwwLjY4NDY5NTk5NSwyOS43MTUzMDQgWiIgZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIwLjQwMDAwMDAwNiIvPjxwYXRoIGQ9Ik0xMy44NDYxNTM4LDIwLjMwNzY5MjMgQzEzLjg0NjE1MzgsMjUuNDA2MTUzOCAyMy4wNzY5MjMxLDM3LjMzMDUyODggMjMuMDc2OTIzMSwzNy4wMDY2ODU3IEMyMy4wNzY5MjMxLDM2LjY4Mjg0MjUgMzIuMzA3NjkyMywyNS40MDYxNTM4IDMyLjMwNzY5MjMsMjAuMzA3NjkyMyBDMzIuMzA3NjkyMywxNS4yMDkyMzA4IDI4LjE3MjMwNzcsMTEuMDc2OTIzMSAyMy4wNzY5MjMxLDExLjA3NjkyMzEgQzE3Ljk4MTUzODUsMTEuMDc2OTIzMSAxMy44NDYxNTM4LDE1LjIwOTIzMDggMTMuODQ2MTUzOCwyMC4zMDc2OTIzIFogTTE4LjQ2MTUzODUsMTkuMzg0NjE1NCBDMTguNDYxNTM4NSwyMS45MzM4NDYyIDIwLjUyOTIzMDgsMjQgMjMuMDc2OTIzMSwyNCBDMjUuNjI0NjE1NCwyNCAyNy42OTIzMDc3LDIxLjkzMzg0NjIgMjcuNjkyMzA3NywxOS4zODQ2MTU0IEMyNy42OTIzMDc3LDE2LjgzNTM4NDYgMjUuNjI0NjE1NCwxNC43NjkyMzA4IDIzLjA3NjkyMzEsMTQuNzY5MjMwOCBDMjAuNTI5MjMwOCwxNC43NjkyMzA4IDE4LjQ2MTUzODUsMTYuODM1Mzg0NiAxOC40NjE1Mzg1LDE5LjM4NDYxNTQgWiIgZmlsbD0iI0ZGRkZGRiIvPjwvZz48L2c+PC9zdmc+">
+                    <p>Khu Vực</p>
+                  </th> -->
+                  <th>
+                    <img src="img/phone.png">
+                    <p>SĐT</p>
+                  </th>
+                </tr>
+                <tr>
+                </tr>
+              </table>
+              <a href="https://admin.facefone.vn/admincp/list-scan" target="_blank" rel="feedback" class="sqbtn sqbtn-small sqbtn-green">Xem Thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="data-login" class="data-login">
+      <h3>FaceFone - Công cụ chốt sale hiệu quả 4.0</h3>
+      <a target="_blank" id="loginBtn" href="https://www.facebook.com/dialog/oauth?client_id=1931115790243808&response_type=token&scope=email&redirect_uri=https://www.facebook.com/connect/login_success.html">
+        <img src="img/facebook.png" alt=""> Đăng Nhập Với Facebook</a>
+    </div>
+    <div id="messagePanel" class="hidden withPadding">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+        <path d="M11 1c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm2.5-12l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z"
+        />
+      </svg>
+      <div class="content">
+      </div>
+      <div class="random-link"></div>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js" type="text/javascript"></script>
+  <script src="scripts/mypopup.js" type="text/javascript"></script>
+</body>
+<!-- <footer class="container withPadding">
+  <span data-role="feedback">
+    <a href="#" target="_blank" rel="feedback" class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path data-name="layer2" d="M30.287 2.029A29.769 29.769 0 0 0 5.223 45.266L2.064 60.6a1.158 1.158 0 0 0 1.4 1.361L18.492 58.4A29.76 29.76 0 1 0 30.287 2.029zm17.931 46.2"
+          fill="none" stroke="#03c037" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"></path>
+        <path data-name="layer1" d="M46.184 38.205l-5.765-1.655a2.149 2.149 0 0 0-2.126.561l-1.41 1.436a2.1 2.1 0 0 1-2.283.482c-2.727-1.1-8.463-6.2-9.927-8.754a2.1 2.1 0 0 1 .166-2.328l1.23-1.592a2.148 2.148 0 0 0 .265-2.183l-2.424-5.485a2.149 2.149 0 0 0-3.356-.769c-1.609 1.361-3.517 3.428-3.749 5.719-.409 4.039 1.323 9.13 7.872 15.242 7.566 7.063 13.626 8 17.571 7.04 2.238-.542 4.026-2.714 5.154-4.493a2.15 2.15 0 0 0-1.218-3.221z"
+          fill="none" stroke="#03c037" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"></path>
+      </svg>
+      Support
+    </a>
+  </span>
+  <span data-role="feedback">
+    <a href="#" target="_blank" rel="feedback" class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path data-name="layer2" d="M38 18s18 14 18 34a10 10 0 0 1-10 10H18A10 10 0 0 1 8 52c0-20 18-34 18-34S14 7.6 14 4s8 2 12 2c5.7 0 6.3-4 10-4s4.1 4.1 10 4.1c2.3 0-2 6-8 11.9z"
+          fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" stroke-linejoin="miter" stroke-linecap="round"></path>
+        <path data-name="layer2" d="M26 18h13a19.2 19.2 0 0 0 13-4m-2 8a6.5 6.5 0 0 1 6 3" fill="none" stroke="#ff0000" stroke-miterlimit="10"
+          stroke-width="4" stroke-linejoin="miter" stroke-linecap="round"></path>
+        <path data-name="layer1" d="M37.9 34a6 6 0 0 0-5.9-5c-3.3 0-6 2.2-6 5.5s3 4.8 6 5.5m-6 5a6 6 0 0 0 6 6c3.3 0 6-2.2 6-5.5s-3-4.8-6-5.5m0-11v-3m0 28v-3"
+          fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" stroke-linejoin="miter" stroke-linecap="round"></path>
+      </svg>
+      Nạp Tài Khoản
+    </a>
+  </span>
+ 
+</footer> -->
+
+</html>

@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/16.png",
+      "default_popup": "myPopup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "scripts/jquery.min.js", "scripts/content.js", "scripts/jquery.notify.min.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "FACEFONE | Công nghệ 4.0, hỗ trợ chốt sale, tìm kiếm khách hàng tiềm năng hoàn hảo!",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "name": "facefone.vn",
+   "permissions": [ "activeTab", "storage", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.13",
+   "web_accessible_resources": [ "scripts/mypopup.js" ]
+}
