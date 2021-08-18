@@ -10,7 +10,5 @@ Công nghệ của FaceFone hoạt động dựa trên nền tảng công nghệ
 
 ![Screen Shot 2021-08-18 at 17 18 25](https://user-images.githubusercontent.com/5404069/129882755-649c86d6-d2bf-4681-b0df-9aa76dc8445c.png)
 
-![Screen Shot 2021-08-18 at 17 18 34](https://user-images.githubusercontent.com/5404069/129882765-5207d12f-e2c8-4d1c-98db-37a4be6a5392.png)
-
 ![Screen Shot 2021-08-18 at 17 22 10](https://user-images.githubusercontent.com/5404069/129882776-9c4d245a-ac32-46b8-9458-b076e7442047.png)
 
