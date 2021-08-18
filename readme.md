@@ -1,7 +1,7 @@
 FACEFONE | Công nghệ 4.0, hỗ trợ chốt sale, tìm kiếm khách hàng tiềm năng hoàn hảo!
 Công nghệ của FaceFone hoạt động dựa trên nền tảng công nghệ Big Data hỗ trợ khách hàng lấy số điện thoại nhanh chóng của bất kỳ ai trên nền tảng của Facebook hiện nay (Profile, Group, Fanpage, Messenger). Tỷ lệ chính xác lên đến 95% kể cả số điện thoại ẩn trên Facebook
 
-- Website: https://fatel.vn/
+- Website: http://facefone.vn/ - https://fatel.vn/
 - Chrome extension: https://chrome.google.com/webstore/detail/facefonevn/kojdendcdoeejdmcehlmhfgpcdhnncei?hl=vi
 
 
